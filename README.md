@@ -7,5 +7,5 @@ It converts integer numbers into characters in lists(from given start index to e
 
 AppTest.java contains unit tests. These tests are provided by JUnit. 
 
-https://app.travis-ci.com/elpif13/myDemoApp.svg?token=apumSsCenTiWNgfBkpiU&branch=master
+[![Build Status](https://app.travis-ci.com/elpif13/myDemoApp.svg?branch=master)](https://app.travis-ci.com/elpif13/myDemoApp)
 
