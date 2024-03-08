@@ -37,23 +37,50 @@ public class AppTest
     {
         assertTrue( true );
     }
-    public void testFound() {
+
+
+    //Check if the method returns null when array is null
+    public void testArrayIsNull() {
       ArrayList<Integer> array = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
-      assertTrue(new App().search(array, 4));
+      ArrayList<Integer> array = null;
+      assertEquals(null,new App().search(array, null,0,3));
     }
 
-    public void testNotFound() {
+    //Check if the method returns null when start>end
+    public void testStartIsGreaterThanEnd() {
       ArrayList<Integer> array = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
-      assertFalse(new App().search(array, 5));
+      ArrayList<Integer> array2 = new ArrayList<>(Arrays.asList(5, 6, 7, 8));
+      assertEquals(null,new App().search(array, array2,3,2));
     }
 
-    public void testEmptyArray() {
-      ArrayList<Integer> array = new ArrayList<>();
-      assertFalse(new App().search(array, 1));
+    //Check if the method returns null when start<0
+    public void testStartIsLessThanZero() {
+      ArrayList<Integer> array = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
+      ArrayList<Integer> array2 = new ArrayList<>(Arrays.asList(5, 6, 7, 8));
+      assertEquals(null,new App().search(array, array2,-1,2));
     }
 
-    public void testNull() {
-      assertFalse(new App().search(null, 1));
+    //Check if the start and end are in right range, returns null
+    public void testStartAndEndRange() {
+      ArrayList<Integer> array = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
+      ArrayList<Integer> array2 = new ArrayList<>(Arrays.asList(5, 6, 7, 8));
+      assertEquals(null,new App().search(array, array2,0,4));
     }
+
+    //Check if the method returns null when end is greater than Size of list
+    public void testEndIsGreaterThanSize() {
+      ArrayList<Integer> array = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
+      ArrayList<Integer> array2 = new ArrayList<>(Arrays.asList(5, 6, 7, 8));
+      assertEquals(null,new App().search(array, array2,2,6));
+    }
+
+
+    public void testCorrectResult() {
+      ArrayList<Integer> array = new ArrayList<>(Arrays.asList(65,66,67));
+      ArrayList<Integer> array2 = new ArrayList<>(Arrays.asList(97,98,99));
+      assertEquals("ABCabc",new App().search(array, array2,0,2));
+    }
+
+    
 
 }
