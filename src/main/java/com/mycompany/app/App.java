@@ -9,9 +9,9 @@ public class App
 {
     /*It takes the given index range of the arrays, 
     converts the integer values ​​in this range into characters, 
-    and checks whether the two strings are anagrams.*/
+    concatinates the two strings and returns.*/
     
-    public static boolean search(ArrayList<Integer> array,ArrayList<Integer> array2, int start, int end) {
+    public static String search(ArrayList<Integer> array,ArrayList<Integer> array2, int start, int end) {
         
         //-------edge cases------------
         if(array == null || array2 == null)
@@ -40,22 +40,9 @@ public class App
             str2 += (char)array2[i];
         }
 
-        int[] charCount1 = new int[256];
-        int[] charCount2 = new int[256];
-
-        for (int i = 0; i < str1.length(); i++) {
-            charCount1[str1.charAt(i)]++;
-            charCount2[str2.charAt(i)]++;
-        }
-
-        // check the freakans of chars
-        for (int i = 32; i <= 126; i++) {
-            if (charCount1[i] != charCount2[i]) {
-                return false;
-            }
-        }
-
-        return true;
+        
+        return str1+str2;
+        
 
     }
 }
