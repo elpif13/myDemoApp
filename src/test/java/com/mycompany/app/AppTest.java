@@ -42,7 +42,7 @@ public class AppTest
     //Check if the method returns null when array is null
     public void testArrayIsNull() {
       ArrayList<Integer> array = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
-      ArrayList<Integer> array = null;
+      ArrayList<Integer> array2 = null;
       assertEquals(null,new App().search(array, null,0,3));
     }
 
