@@ -1,7 +1,7 @@
 Author: Gizem Elif Bayar 
 Date: 6.03.2024
 
-App.java contains a static method named search. It takes at least 4 parameters (at least two of them must be Integer[9] or ArrayList<Integer>). 
+App.java contains a static method named search. It takes at least 4 parameters (at least two of them must be int[] or ArrayList<Integer>). 
 
 It converts integer numbers into characters in lists(from given start index to end index), creates two separate strings, and concatenates them.
 
