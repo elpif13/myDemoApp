@@ -1,3 +1,10 @@
-language: java
-jdk:
-  - oraclejdk8
+{
+  "language": "java",
+  "os": [
+    "linux"
+  ],
+  "dist": "xenial",
+  "jdk": [
+    "oraclejdk8"
+  ]
+}
