@@ -9,3 +9,5 @@ AppTest.java contains unit tests. These tests are provided by JUnit.
 
 [![Build Status](https://app.travis-ci.com/elpif13/myDemoApp.svg?token=apumSsCenTiWNgfBkpiU&branch=master)](https://app.travis-ci.com/elpif13/myDemoApp)
 
+Heroku site url: https://agile-plains-58256-ea428971c185.herokuapp.com/compute
+
